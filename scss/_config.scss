@@ -1,0 +1,107 @@
+// COLORS
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$clr-gray: hsl(0, 0%, 55%);
+$clr-dark-gray: hsl(0, 0%, 41%);
+
+//FONTS
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+$font-heading: 'Josefin Sans', sans-serif;
+$font-body: 'Alata', sans-serif;
+
+//INITIAL STYLE SETTINGS
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%; /*change 1rem to 10px */
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+a {
+  font-family: 'Alata', sans-serif;
+}
+
+a:hover,
+a:focus {
+  outline: none;
+}
+
+a::after {
+  content: '';
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 25%;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: all 300ms ease-in-out;
+}
+
+a:hover::after,
+a:focus::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+body {
+  background-color: $white;
+  font-family: $font-body;
+  margin: 0 auto;
+  position: relative;
+  max-width: 1440px;
+  min-width: 320;
+
+  @media screen and (min-width: 1441px) {
+    box-shadow: 0px 34px 40px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+
+// COMMON VARIABLES
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin cap-text {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+// RESPONSIVE MEDIA QUERIES
+@mixin media-desktop {
+  // desktop, large screen 1025-1200px
+  @media only screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin media-laptop {
+  //laptop, small screen 769-1024px
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  // iPad, tablet 481-768px
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-phone {
+  // phone 320-480px
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}

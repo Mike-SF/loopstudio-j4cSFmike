@@ -1,0 +1,72 @@
+.section-1 {
+  margin-top: 10rem;
+  margin-bottom: 15rem;
+  position: relative;
+
+  &__image {
+    margin-left: 12%;
+
+    @include media-laptop {
+      margin: 0;
+      text-align: center;
+      img {
+        width: 80vw;
+      }
+    }
+  }
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    position: absolute;
+    width: 35vw;
+    right: 12%;
+    top: 40%;
+    background-color: $white;
+    padding: 6rem 0 10rem 6rem;
+
+    @include media-desktop {
+      padding: 5rem 0 5rem 5rem;
+      top: 50%;
+      right: 8%;
+    }
+
+    @include media-laptop {
+      position: relative;
+      width: 80vw;
+      padding: 2% 4%;
+      left: 10%;
+      top: 5rem;
+      justify-content: center;
+    }
+
+    &_title {
+      text-transform: uppercase;
+      font-size: 5rem;
+      padding-bottom: 1rem;
+      font-family: $font-heading;
+      font-weight: 300;
+      color: $black;
+
+      @include media-desktop {
+        font-size: 3.5rem;
+      }
+
+      @include media-tablet {
+        font-size: 3rem;
+      }
+      @include media-phone {
+        font-size: 2.8rem;
+      }
+
+    }
+
+    &_text {
+      font-family: $font-body;
+      font-size: 1.6rem;
+      color: $clr-gray;
+      line-height: 1.8;
+    }
+  }
+}
