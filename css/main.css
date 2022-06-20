@@ -12,11 +12,20 @@
 html {
   font-size: 62.5%;
   /*change 1rem to 10px */
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 a {
-  font-family: 'Alata', sans-serif;
+  font-family: "Alata", sans-serif;
+  color: white;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1 {
+  font-family: "Josefin Sans", sans-serif;
 }
 
 a:hover,
@@ -59,10 +68,10 @@ body {
 }
 
 .header {
-  width: 100%;
   min-height: 75vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/desktop/image-hero.jpg) no-repeat;
   background-size: cover;
+  color: white;
 }
 
 @media only screen and (max-width: 480px) {
@@ -72,101 +81,176 @@ body {
 }
 
 .header__text {
-  width: 45vw;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 200;
-  font-size: 7rem;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  margin-top: 14vh;
-  margin-left: 9vw;
+  margin-top: 14rem;
+  margin-left: 12rem;
+  padding: 1.6rem;
   border: 2px solid white;
-  padding: 3rem 2rem 3rem 3rem;
+  max-width: 55rem;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 768px) {
   .header__text {
-    width: 50vw;
-    margin-left: 10rem;
-    margin-top: 14rem;
-    font-size: 4.5rem;
-    line-height: 1.2;
+    margin-top: 10rem;
+    max-width: 33rem;
   }
 }
 
-@media only screen and (max-width: 1024px) {
-  .header__text {
-    width: 50vw;
+.header__text h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 6rem;
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 768px) {
+  .header__text h1 {
     font-size: 4rem;
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .header__text {
-    width: 60vw;
-    font-size: 3.5rem;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .header__text {
-    width: 80vw;
-    margin: 25vw 10vw;
-    font-size: 3rem;
-  }
-}
-
-.header .loopstudio-logo {
-  margin-top: 5rem;
-}
-
-.header .menu_nav {
-  list-style-type: none;
-  display: flex;
-  margin-top: 6rem;
-}
-
-@media only screen and (max-width: 768px) {
-  .header .menu_nav {
-    visibility: hidden;
-  }
-}
-
-.header .menu_nav a {
+.container {
+  max-width: 100%;
   position: relative;
-  color: white;
-  font-size: 1.5rem;
-}
-
-.header .menu_nav a::after {
-  background-color: white;
-}
-
-.header .menu_nav li {
-  margin-bottom: 0.5rem;
-  margin-right: 3rem;
 }
 
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
-  margin: 0 5% 0 10%;
+  margin-right: 6rem;
 }
 
-.menu-nav__burger {
+@media only screen and (max-width: 768px) {
+  .nav-wrapper.open {
+    flex-direction: column;
+    justify-content: left;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+.nav__logo {
+  margin-top: 5rem;
+  margin-left: 10rem;
+  height: 3rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav__logo.open {
+    height: auto;
+    width: 18rem;
+  }
+}
+
+.nav-btn {
   position: absolute;
+  z-index: 5;
+  right: 5rem;
   top: 5rem;
-  right: 3rem;
-  font-size: 3rem;
-  color: white;
+  height: 4rem;
+  width: 4rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
   visibility: hidden;
 }
 
 @media only screen and (max-width: 768px) {
-  .menu-nav__burger {
+  .nav-btn {
     visibility: visible;
   }
+}
+
+.nav-btn__burger {
+  position: absolute;
+  right: 0;
+  top: 1.3rem;
+  width: 3rem;
+  height: 4px;
+  background: white;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-btn__burger::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  width: 3rem;
+  height: 4px;
+  background: white;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-btn__burger::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  width: 3rem;
+  height: 4px;
+  background: white;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-btn__burger.open {
+  transform: rotate(720deg);
+  background: transparent;
+}
+
+.nav-btn__burger.open::before {
+  transform: rotate(45deg) translate(5px, 10px);
+}
+
+.nav-btn__burger.open::after {
+  width: 28px;
+  transform: rotate(-45deg) translate(3px, -6px);
+}
+
+.nav {
+  min-width: 50vw;
+  height: auto;
+}
+
+.nav__menu {
+  display: flex;
+  justify-content: right;
+  margin-top: 6rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav__menu {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav__menu.open {
+    flex-direction: column;
+    justify-content: left;
+    margin-left: 10rem;
+    visibility: visible;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+.nav__menu_item {
+  font-size: 1.5rem;
+  margin-right: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav__menu_item {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.nav__menu a {
+  position: relative;
+}
+
+.nav__menu a::after {
+  background-color: white;
+  bottom: -0.5rem;
 }
 
 .section-1 {

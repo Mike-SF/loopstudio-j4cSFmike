@@ -19,45 +19,62 @@
   <body>
     <!-- navbar & top image -->
     <header class="header">
-      <div class="nav-wrapper">
-        <div>
+      <div class="container">
+        <div class="nav-wrapper">
           <img
-            class="loopstudio-logo"
+          class="nav__logo"
             src="./images/logo.svg"
             alt="loopstudio-logo"
-          />
+            />
+            
+            <div class="nav-btn">
+              <span class="nav-btn__burger"></span>
+            </div>
+            <nav class="nav">
+              <ul class="nav__menu">
+                <li class="nav__menu_item">
+                  <a href="#!" class="nav__menu_link">Careers</a>
+                </li>
+                <li class="nav__menu_item">
+                  <a href="#!" class="nav__menu_link">About</a>
+                </li>
+                <li class="nav__menu_item">
+                  <a href="#!" class="nav__menu_link">Products</a>
+                </li>
+                <li class="nav__menu_item">
+                  <a href="#!" class="nav__menu_link">Events</a>
+                </li>
+                <li class="nav__menu_item">
+                  <a href="#!" class="nav__menu_link">Support</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          
+          <div class="header__text">
+            <h1>Immersive experiences that deliver</h1>
         </div>
-        
-        <i class="fa fa-bars menu-nav__burger"></i>
-          <ul class="menu_nav">
-            <li><a href="#!" class="menu-nav__link">Careers</a></li>
-            <li><a href="#!" class="menu-nav__link">About</a></li>
-            <li><a href="#!" class="menu-nav__link">Products</a></li>
-            <li><a href="#!" class="menu-nav__link">Events</a></li>
-            <li><a href="#!" class="menu-nav__link">Support</a></li>
-          </ul>
       </div>
-      <div class="header__text">Immersive experiences that deliver</div>
     </header>
-
+    
     <!-- interactive VR section -->
     <section class="section-1">
       <div class="section-1__image">
         <picture>
           <source
-            srcset="images/desktop/image-interactive.jpg"
-            media="(min-width: 768px)"
+          srcset="images/desktop/image-interactive.jpg"
+          media="(min-width: 768px)"
           />
           <img
-            src="images/mobile/image-interactive.jpg"
-            alt="man with vr glasees"
+          src="images/mobile/image-interactive.jpg"
+          alt="man with vr glasees"
           />
         </picture>
       </div>
-
+      
       <div class="section-1__text-block">
         <span class="section-1__text-block_title"
-          >The leader in interactive VR</span
+        >The leader in interactive VR</span
         >
         <p class="section-1__text-block_text">
           Founded in 2011, Loopstudios has been producing world-class virtual
@@ -67,22 +84,22 @@
         </p>
       </div>
     </section>
-
+    
     <!-- creations section -->
     <div class="creations">
       <div class="creations__title">Our creations</div>
-
+      
       <div class="creations__pictures">
         <a href="#!" class="earth">
           <figure>
             <picture>
               <source
-                srcset="images/desktop/image-deep-earth.jpg"
-                media="(min-width: 768px)"
+              srcset="images/desktop/image-deep-earth.jpg"
+              media="(min-width: 768px)"
               />
               <img
-                src="images/mobile/image-deep-earth.jpg"
-                alt="earth from outer space"
+              src="images/mobile/image-deep-earth.jpg"
+              alt="earth from outer space"
               />
             </picture>
             <figcaption class="caption">Deep<br />Earth</figcaption>
@@ -92,12 +109,12 @@
           <figure>
             <picture>
               <source
-                srcset="images/desktop/image-night-arcade.jpg"
-                media="(min-width: 768px)"
+              srcset="images/desktop/image-night-arcade.jpg"
+              media="(min-width: 768px)"
               />
               <img
-                src="images/mobile/image-night-arcade.jpg"
-                alt="arcade game"
+              src="images/mobile/image-night-arcade.jpg"
+              alt="arcade game"
               />
             </picture>
             <figcaption class="caption">Night<br />arcade</figcaption>
@@ -107,12 +124,12 @@
           <figure>
             <picture>
               <source
-                srcset="images/desktop/image-soccer-team.jpg"
-                media="(min-width: 768px)"
+              srcset="images/desktop/image-soccer-team.jpg"
+              media="(min-width: 768px)"
               />
               <img
-                src="images/mobile/image-soccer-team.jpg"
-                alt="soccer player"
+              src="images/mobile/image-soccer-team.jpg"
+              alt="soccer player"
               />
             </picture>
             <figcaption class="caption">Soccer<br />team VR</figcaption>
@@ -122,8 +139,8 @@
           <figure>
             <picture>
               <source
-                srcset="images/desktop/image-grid.jpg"
-                media="(min-width: 768px)"
+              srcset="images/desktop/image-grid.jpg"
+              media="(min-width: 768px)"
               />
               <img src="images/mobile/image-grid.jpg" alt="race car front" />
             </picture>
@@ -134,12 +151,12 @@
           <figure>
             <picture>
               <source
-                srcset="images/desktop/image-from-above.jpg"
-                media="(min-width: 768px)"
+              srcset="images/desktop/image-from-above.jpg"
+              media="(min-width: 768px)"
               />
               <img
-                src="images/mobile/image-from-above.jpg"
-                alt="curvy roads high above"
+              src="images/mobile/image-from-above.jpg"
+              alt="curvy roads high above"
               />
             </picture>
             <figcaption class="caption">From up<br />above VR</figcaption>
@@ -149,12 +166,12 @@
           <figure>
             <picture>
               <source
-                srcset="images/desktop/image-pocket-borealis.jpg"
-                media="(min-width: 768px)"
+              srcset="images/desktop/image-pocket-borealis.jpg"
+              media="(min-width: 768px)"
               />
               <img
-                src="images/mobile/image-pocket-borealis.jpg"
-                alt="borealis lights"
+              src="images/mobile/image-pocket-borealis.jpg"
+              alt="borealis lights"
               />
             </picture>
             <figcaption class="caption">Pocket<br />borealis</figcaption>
@@ -164,12 +181,12 @@
           <figure>
             <picture>
               <source
-                srcset="images/desktop/image-curiosity.jpg"
-                media="(min-width: 768px)"
+              srcset="images/desktop/image-curiosity.jpg"
+              media="(min-width: 768px)"
               />
               <img
-                src="images/mobile/image-curiosity.jpg"
-                alt="equipment on lunar surface"
+              src="images/mobile/image-curiosity.jpg"
+              alt="equipment on lunar surface"
               />
             </picture>
             <figcaption class="caption">The<br />curiosity</figcaption>
@@ -179,12 +196,12 @@
           <figure>
             <picture>
               <source
-                srcset="images/desktop/image-fisheye.jpg"
-                media="(min-width: 768px)"
+              srcset="images/desktop/image-fisheye.jpg"
+              media="(min-width: 768px)"
               />
               <img
-                src="images/mobile/image-fisheye.jpg"
-                alt="fisheye photo of city"
+              src="images/mobile/image-fisheye.jpg"
+              alt="fisheye photo of city"
               />
             </picture>
             <figcaption class="caption">Make it<br />fisheye</figcaption>
@@ -195,13 +212,13 @@
         <button class="creations__btn_text">See All</button>
       </div>
     </div>
-
+    
     <footer class="footer">
       <div class="wrapper">
         <div class="footer__logo">
           <img src="./images/logo.svg" alt="loopstudio-logo" />
         </div>
-
+        
         <ul class="footer__nav">
           <li><a href="#!" class="menu-link">Careers</a></li>
           <li><a href="#!" class="menu-link">About</a></li>

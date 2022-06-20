@@ -1,9 +1,9 @@
 .header {
-  width: 100%;
   min-height: 75vh;
   background: linear-gradient(rgba($black, 0.3), rgba($black, 0.3)),
     url(../images/desktop/image-hero.jpg) no-repeat;
   background-size: cover;
+  color: $white;
 
   @include media-phone {
     background: linear-gradient(rgba($black, 0.3), rgba($black, 0.3)),
@@ -11,86 +11,30 @@
   }
 
   &__text {
-    width: 45vw;
-    font-family: $font-heading;
-    font-weight: 200;
-    font-size: 7rem;
-    color: $white;
-    @include cap-text;
-    margin-top: 14vh;
-    margin-left: 9vw;
+    margin-top: 14rem;
+    margin-left: 12rem;
+    padding: 1.6rem;
     border: 2px solid $white;
-    padding: 3rem 2rem 3rem 3rem;
-
-    @include media-desktop {
-      width: 50vw;
-      margin-left: 10rem;
-      margin-top: 14rem;
-      font-size: 4.5rem;
-      line-height: 1.2;
-    }
-
-    @include media-laptop {
-      width: 50vw;
-      font-size: 4rem;
-    }
+    max-width: 55rem;
 
     @include media-tablet {
-      width: 60vw;
-      font-size: 3.5rem;
+      margin-top: 10rem;
+      max-width: 33rem;
     }
 
-    @include media-phone {
-      width: 80vw;
-      margin: 25vw 10vw;
-      font-size: 3rem;
-    }
-  }
-  & .loopstudio-logo {
-    margin-top: 5rem;
-  }
+    & h1 {
+      @include cap-text;
+      font-size: 6rem;
+      font-weight: 300;
 
-  & .menu_nav {
-    list-style-type: none;
-    display: flex;
-    margin-top: 6rem;
-
-    @include media-tablet {
-      visibility: hidden;
-    }
-
-    & a {
-      position: relative;
-      color: $white;
-      font-size: 1.5rem;
-    }
-
-    & a::after {
-      background-color: $white;
-    }
-
-    & li {
-      margin-bottom: 0.5rem;
-      margin-right: 3rem;
+      @include media-tablet {
+        font-size: 4rem;
+      }
     }
   }
 }
 
-.nav-wrapper {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 5% 0 10%;
-}
-
-.menu-nav__burger {
-  position: absolute;
-  top: 5rem;
-  right: 3rem;
-  font-size: 3rem;
-  color: $white;
-  visibility: hidden;
-
-  @include media-tablet {
-    visibility: visible;
-  }
+.container {
+  max-width: 100%;
+  position: relative;
 }
